@@ -25,8 +25,12 @@ import {
   DrawerBody,
 } from "@chakra-ui/react";
 import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom/dist";
 
 const DrawerMobile = (props) => {
+  console.log(props);
+  const navigate = useNavigate();
   return (
     <Drawer
       isOpen={props.isOpen}
@@ -46,20 +50,24 @@ const DrawerMobile = (props) => {
         <DrawerBody>
           <Stack spacing={3} as={"nav"}>
             {props.Links.map((link) => (
-              <Box
-                as="a"
-                key={link.name} // Using link.name as the key
-                href={link.path} // Using the path directly from the object
-                px={4}
-                py={2}
-                rounded={"md"}
-                _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200", // Optional: add hover effect
-                }}
-              >
-                {link.name}
-              </Box>
+              <>
+                {console.log("path", props.path)}
+                <Box
+                  key={link.name}
+                  // as={Link}
+                  // to={props.path} // Using the path directly from the object
+                  px={4}
+                  py={2}
+                  rounded={"md"}
+                  onClick={() => navigate(link.path)}
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "gray.200", // Optional: add hover effect
+                  }}
+                >
+                  {link.name}
+                </Box>
+              </>
             ))}
           </Stack>
         </DrawerBody>
