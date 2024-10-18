@@ -64,7 +64,7 @@ const AllCourses = () => {
         <TabList>
           {tabData.map((tab, index) => (
             <Tab
-              py={{ base: 1, lg: 4 }}
+              py={{ base: 3, lg: 4 }}
               w={"full"}
               key={index}
               _selected={{
@@ -74,6 +74,7 @@ const AllCourses = () => {
                 borderColor: "#61C0BF",
               }}
               color="gray.400"
+              fontSize={{ base: 10, md: "sm", lg: "md" }}
             >
               {tab.name}
             </Tab>

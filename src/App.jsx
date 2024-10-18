@@ -20,7 +20,7 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Courses />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/course-details/:desc" element={<CourseDetails />} />
         <Route path="/course-content/:partName" element={<CourseContent />} />
@@ -28,13 +28,13 @@ const App = () => {
           path="/my-full-year-french-course"
           element={<MyFullYearCouese />}
         />
-        <Route path="/order" element={<Order />} />
+        <Route path="/order" element={<Courses />} />
         <Route path="/weekly-videos" element={<WeeklyContentVideos />} />
         <Route path="/sk-program" element={<SKProgram />} />
         <Route path="/kindergarden-program" element={<KindergardenProgram />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/about" element={<Courses />} />
+        <Route path="/blog" element={<Courses />} />
+        <Route path="/contact" element={<Courses />} />
       </Routes>
       <Footer />
     </Router>

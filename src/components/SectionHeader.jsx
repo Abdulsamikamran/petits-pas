@@ -30,10 +30,10 @@ const SectionHeader = ({ title, description, variant, color }) => {
         py={4}
       >
         <Box>
-          <Text fontWeight={"bold"} fontSize={{ base: 10, lg: 20 }}>
+          <Text fontWeight={"bold"} fontSize={{ base: 14, lg: 20 }}>
             {title}
           </Text>
-          <Text fontSize={{ base: 7, md: 12 }} color={"gray.400"}>
+          <Text fontSize={{ base: 10, md: 12 }} color={"gray.400"}>
             {description}
           </Text>
         </Box>
